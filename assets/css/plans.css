@@ -45,6 +45,7 @@ a {
 }
 nav {
   width: 30em;
+  height: 2.5em;
   display: flex;
   justify-content: center;
   margin-top: 1em;
