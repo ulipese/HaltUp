@@ -16,12 +16,13 @@ h1 {
 body {
   width: 100%;
   height: 100vh;
-  background: rgb(20, 11, 13);
   background: linear-gradient(
     120deg,
     rgba(20, 11, 13, 1) 0%,
     rgba(128, 0, 26, 1) 100%
-  );
+  ) no-repeat;
+  background-size: cover;
+  /* overflow: hidden; */
 }
 
 header {
@@ -31,6 +32,7 @@ header {
   z-index: 100;
   display: flex;
   justify-content: center;
+  /* position: relative; */
 }
 a {
   text-decoration: none;
@@ -39,9 +41,21 @@ a {
 }
 .header__logo {
   width: 3em;
-  margin-top: 1em;
-  margin-left: -20em;
-  margin-right: 18em;
+  position: absolute;
+  left: 5em;
+  top: 1em;
+  z-index: 100;
+}
+.header__menu {
+  display: none;
+  width: 2.5em;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 100;
+}
+.header__menu:hover {
+  cursor: pointer;
 }
 nav {
   width: 30em;
@@ -68,28 +82,92 @@ nav a:hover {
   transition: 0.5s;
 }
 
-main {
+.main {
   width: 100%;
   height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 5em;
+}
+.main-content{
+  color: #fff;
+  margin-top: 3em;
+  font-size: 1.5em;
+  width: 30em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+hr{
+  width: 8em;
+  margin-top: 0.8em;
+}
+h2{
+  margin-top: 1em;
+  width: 30em;
+  font-size: 0.8em;  
+  color: #dfdfdf;
+}
+b{
+  color: #FF0033;
+}
+.main-content h1 {
+  width: 12em;
+}
+.main-image{
+  margin-top: 11.6em; 
+  width: 15em;
+}
+.button-acc {
+  border: 1px solid #fff;
+  border-radius: 25px;
+  width: 13em;
+  height: 1.8em;
+  margin-top: 1em;
+  padding: 0;
 
-.main {
-  width: 85%;
-  height: 100%;
-  /*background-color: rgba(51, 51, 51, 0.24);*/
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
 }
-
+.button-acc__create-acc {
+  color: #FF0033;
+  background-color: #fff;
+  width: 55%;
+  height: 100%;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+  
+}
+.button-acc__create-acc:hover {
+color: #fff;
+background-color: #FF0033;
+}
+.button-acc__login-acc {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+}
+.button-acc__login-acc:hover {
+  color: #FF0033;
+}
 footer {
   width: 100%;
   height: 4em;
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  
+
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: space-around;
@@ -116,4 +194,53 @@ footer {
 
 .footer-right img:hover {
   transform: scale(1.25);
+}
+
+@media screen and (max-width: 916px) {
+  .header__logo {
+    left: 2em;
+  }
+  .header__nav {
+    background-color: #000;
+    position: relative;
+    width: 1vw;
+    top: -100vh;
+    z-index: 10;
+    height: 1vh;
+    margin-top: 0em;
+    border-radius: .3em;
+    transition: 800ms;
+    flex-direction: column;
+  }
+  .header__nav--active {
+    transition: 800ms;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  .header__menu {
+    display: block;
+  }
+  .main {
+    padding: 0em;
+  }
+  .main-content h1 {
+    width: 12em;
+    font-size: 1.2em;
+  }
+  .main-content h2 {
+    width: 15em;
+    font-size: 0.8em;
+  }
+  .main-image {
+    width: 10em;
+  }
+  .footer-left {
+    display: none;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-image {
+    display: none;
+  }
 }
