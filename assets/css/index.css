@@ -17,10 +17,11 @@ body {
   width: 100%;
   height: 100vh;
   background: linear-gradient(
-    120deg,
-    rgba(20, 11, 13, 1) 0%,
-    rgba(128, 0, 26, 1) 100%
-  ) no-repeat;
+      120deg,
+      rgba(20, 11, 13, 1) 0%,
+      rgba(128, 0, 26, 1) 100%
+    )
+    no-repeat;
   background-size: cover;
   /* overflow: hidden; */
 }
@@ -69,8 +70,8 @@ nav {
   padding-left: 1em;
 }
 nav a {
-  padding: .5em 1.2em;
-  margin-right: .5em;
+  padding: 0.5em 1.2em;
+  margin-right: 0.5em;
   border-radius: 17px;
 }
 .nav__a--selected {
@@ -91,7 +92,7 @@ nav a:hover {
   align-items: center;
   padding: 0em 5em;
 }
-.main-content{
+.main-content {
   color: #fff;
   margin-top: 3em;
   font-size: 1.5em;
@@ -100,24 +101,24 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
 }
-hr{
+hr {
   width: 8em;
   margin-top: 0.8em;
 }
-h2{
+h2 {
   margin-top: 1em;
   width: 30em;
-  font-size: 0.8em;  
+  font-size: 0.8em;
   color: #dfdfdf;
 }
-b{
-  color: #FF0033;
+b {
+  color: #ff0033;
 }
 .main-content h1 {
   width: 12em;
 }
-.main-image{
-  margin-top: 11.6em; 
+.main-image {
+  margin-top: 11.6em;
   width: 15em;
 }
 .button-acc {
@@ -132,10 +133,9 @@ b{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
 }
 .button-acc__create-acc {
-  color: #FF0033;
+  color: #ff0033;
   background-color: #fff;
   width: 55%;
   height: 100%;
@@ -145,11 +145,10 @@ b{
   justify-content: center;
   align-items: center;
   transition: 300ms;
-  
 }
 .button-acc__create-acc:hover {
-color: #fff;
-background-color: #FF0033;
+  color: #fff;
+  background-color: #ff0033;
 }
 .button-acc__login-acc {
   width: 45%;
@@ -160,7 +159,7 @@ background-color: #FF0033;
   transition: 300ms;
 }
 .button-acc__login-acc:hover {
-  color: #FF0033;
+  color: #ff0033;
 }
 footer {
   width: 100%;
@@ -208,7 +207,7 @@ footer {
     z-index: 10;
     height: 1vh;
     margin-top: 0em;
-    border-radius: .3em;
+    border-radius: 0.3em;
     transition: 800ms;
     flex-direction: column;
   }
