@@ -15,7 +15,6 @@ h1 {
 
 body {
   width: 100%;
-  height: 100vh;
   background: rgb(20, 11, 13);
   background: linear-gradient(
       120deg,
@@ -32,6 +31,7 @@ header {
   z-index: 100;
   display: flex;
   justify-content: center;
+  margin-bottom: 3em;
 }
 a {
   text-decoration: none;
@@ -81,29 +81,97 @@ nav a:hover {
   transition: 0.5s;
 }
 
-main {
-  width: 100%;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.main {
-  width: 85%;
-  height: 100%;
-  /*background-color: rgba(51, 51, 51, 0.24);*/
+.main-content {
+  margin-left: 0px;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
-
+.main-text-create {
+  color: #fff;
+  font-size: 1.5em;
+}
+.main-text-enter {
+  color: #fff;
+  font-size: 1.5em;
+}
+.textboxes-enter {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.textboxes-enter input {
+  margin-top: 35px;
+  width: 40vh;
+  padding: 10px;
+  background-color: transparent;
+  font-size: 1em;
+  font-weight: bold;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  outline: none;
+  color: #fff;
+}
+.textboxes-enter input::placeholder {
+  color: #fff;
+  font-weight: bold;
+  opacity: 0.8;
+}
+.enter-acc {
+  float: right;
+}
+hr {
+  height: 500px;
+}
+.buttons {
+  border: 2px solid #fff;
+  border-radius: 25px;
+  width: 90em;
+  height: 4em;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+.button-acc-create {
+  color: #ff0033;
+  background-color: #fff;
+  width: 50%;
+  height: 100%;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+}
+.button-acc-create:hover {
+  color: #fff;
+  background-color: #ff0033;
+}
+.button-acc-enter {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+  color: #fff;
+}
+.button-acc-enter:hover {
+  color: #ff0033;
+}
 footer {
   width: 100%;
   height: 4em;
-  position: fixed;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
   bottom: 0;
-
-  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -129,4 +197,195 @@ footer {
 
 .footer-right img:hover {
   transform: scale(1.25);
+}
+
+/*Responsividade*/
+
+@media (max-width: 1600px) {
+  .icon {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .main-content {
+    margin-left: 10px;
+  }
+  .main-text-create {
+    color: #fff;
+    font-size: 1.2em;
+  }
+  .main-text-enter {
+    color: #fff;
+    font-size: 1.2em;
+  }
+
+  .buttons {
+    border: 2px solid #fff;
+    border-radius: 25px;
+    width: 70em;
+    height: 3.5em;
+    margin-top: 3em;
+  }
+}
+@media (max-width: 1400px) {
+  .main-text-create {
+    color: #fff;
+    font-size: 1em;
+  }
+  .main-text-enter {
+    color: #fff;
+    font-size: 1em;
+  }
+  hr {
+    height: 300px;
+  }
+  .buttons {
+    border: 2px solid #fff;
+    border-radius: 25px;
+    width: 50em;
+    height: 3em;
+    margin-top: 3em;
+  }
+}
+@media (max-width: 1200px) {
+  .main-content {
+    margin-top: 2em;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 1px;
+    width: 50%;
+  }
+}
+@media (max-width: 900px) {
+  .header__logo {
+    left: 2em;
+  }
+  .header__nav {
+    background-color: #000;
+    position: relative;
+    width: 1vw;
+    top: -100vh;
+    z-index: 10;
+    height: 1vh;
+    margin-top: 0em;
+    border-radius: 0.3em;
+    transition: 800ms;
+    flex-direction: column;
+  }
+  .header__nav--active {
+    transition: 800ms;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  .header__menu {
+    display: block;
+  }
+
+  .main-content {
+    margin-top: 2em;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-text-create {
+    color: #fff;
+    font-size: 1em;
+  }
+  .main-text-enter {
+    color: #fff;
+    font-size: 1em;
+  }
+  .textboxes-enter {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+  .textboxes-enter input {
+    margin-top: 25px;
+    width: 30vh;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: 1.8px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    color: #fff;
+  }
+  .textboxes-enter input::placeholder {
+    color: #fff;
+    font-weight: bold;
+    opacity: 0.8;
+  }
+
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 1px;
+    width: 50%;
+  }
+  .buttons {
+    border: 2px solid #fff;
+    border-radius: 25px;
+    width: 23em;
+    height: 3.5em;
+    margin-top: 2em;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .button-acc-create {
+    color: #ff0033;
+    background-color: #fff;
+    width: 50%;
+    height: 100%;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+  }
+  .button-acc-enter {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+    color: #fff;
+  }
+}
+@media (max-width: 680px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-text-create {
+    color: #fff;
+    font-size: 0.8em;
+  }
+  .main-text-enter {
+    color: #fff;
+    font-size: 0.8em;
+  }
+  .buttons {
+    width: 15em;
+    height: 3em;
+  }
+  .footer-left {
+    display: none;
+  }
 }
