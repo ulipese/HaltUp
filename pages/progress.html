@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../assets/css/progress.css" />
     <link rel="shortcut icon" href="../assets/img/HaltUp-icon.svg" />
     <script src="../assets/js/header.js" async></script>
+    <script src="../assets/js/progress.js" async></script>
   </head>
   <body>
     <header class="header">
@@ -39,8 +40,82 @@
       />
     </header>
 
-    <main>
-      <!--Joga o conteúdo aqui-->
+    <main class="main">
+      <div class="content-imc">
+        <h1>IMC</h1>
+        <form class="form-imc_radio">
+          <input
+            type="radio"
+            name="sexo"
+            id="btn-sexo-masc"
+            value="Feminino"
+            checked
+          />
+          <label class="label-masc" for="btn-sexo-masc">Masculino</label>
+
+          <input type="radio" name="sexo" id="btn-sexo-fem" value="Masculino" />
+          <label class="label-fem" for="btn-sexo-fem">Feminino</label>
+        </form>
+        <form class="form-imc_txt">
+          <input
+            type="number"
+            name="text"
+            class="txt-peso"
+            placeholder="Peso"
+          />
+          <input
+            type="number"
+            name="text"
+            class="txt-altura"
+            placeholder="Altura"
+          />
+        </form>
+        <p class="result-imc">IMC:</p>
+
+        <input
+          type="button"
+          class="btn-calc_imc"
+          value="Calcular"
+          onclick="imc()"
+        />
+      </div>
+
+      <hr />
+
+      <div class="content-rm">
+        <h1>Repetição Máxima</h1>
+        <form class="form-rm_radio">
+          <input type="radio" name="obj" id="btn-objetivo_1" checked />
+          <label class="label-1" for="btn-objetivo_1">Hipertrofia</label>
+
+          <input type="radio" name="obj" id="btn-objetivo_2" />
+          <label class="label-2" for="btn-objetivo_2">Força</label>
+
+          <input type="radio" name="obj" id="btn-objetivo_3" />
+          <label class="label-3" for="btn-objetivo_3">Resistência</label>
+        </form>
+        <form class="form-rm_txt">
+          <input
+            type="number"
+            name="text"
+            class="txt-carga"
+            placeholder="Carga"
+          />
+          <input
+            type="number"
+            name="text"
+            class="txt-reps"
+            placeholder="Repetições"
+          />
+        </form>
+        <p class="result-rm">RM: - Carga de Trabalho:</p>
+        <input
+          type="button"
+          class="btn-calc_rm"
+          value="Calcular"
+          onclick="clicar()"
+        />
+      </div>
     </main>
 
     <footer>
