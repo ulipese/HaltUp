@@ -61,13 +61,15 @@
             type="number"
             name="text"
             class="txt-peso"
-            placeholder="Peso"
+            placeholder="Peso (E.g. 75kg)"
+            autocomplete="off"
           />
           <input
             type="number"
             name="text"
             class="txt-altura"
-            placeholder="Altura"
+            placeholder="Altura (e.g. 175cm)"
+            autocomplete="off"
           />
         </form>
         <p class="result-imc">IMC:</p>
@@ -76,7 +78,7 @@
           type="button"
           class="btn-calc_imc"
           value="Calcular"
-          onclick="imc()"
+          onclick="calcIMC()"
         />
       </div>
 
@@ -99,13 +101,15 @@
             type="number"
             name="text"
             class="txt-carga"
-            placeholder="Carga"
+            placeholder="Carga (e.g. 25kg)"
+            autocomplete="off"
           />
           <input
             type="number"
             name="text"
             class="txt-reps"
-            placeholder="Repetições"
+            placeholder="Repetições (e.g. 8)"
+            autocomplete="off"
           />
         </form>
         <p class="result-rm">RM: - Carga de Trabalho:</p>
@@ -113,7 +117,7 @@
           type="button"
           class="btn-calc_rm"
           value="Calcular"
-          onclick="clicar()"
+          onclick="calcRM()"
         />
       </div>
     </main>
