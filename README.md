@@ -1,4 +1,4 @@
-# HaltUp
+## HaltUp
 
 <b>Descrição:</b> Projeto integrador de experiência em desenvolvimento front-end (html, css e javascript).<br>
 <b>Tema:</b> Site de Academia.<br>
